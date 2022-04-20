@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   void initState() {
     super.initState();
-    _controller = TabController(length: 4, initialIndex: 1, vsync: this);
+    _controller = TabController(length: 4, initialIndex: 2, vsync: this);
   }
 
   Widget build(BuildContext context) {
@@ -88,10 +88,10 @@ class _HomeScreenState extends State<HomeScreen>
         body:  TabBarView(
           controller: _controller,
           children: [
-            CameraDetails(),
+            const CameraDetails(),
             ChatDetails(),
            StatusDetails(),
-            CallDetails(),
+            const CallDetails(),
           ],
         ));
   }
